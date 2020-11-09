@@ -448,6 +448,20 @@ img {
   list-style-type: none;
 }
 
+@media only screen and (max-width: 860px) {
+  .features__container {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .features__heading {
+    width: 100%;
+    max-width: 100%;
+  }
+  .features__list {
+    max-width: 100%;
+  }
+}
+
 .feature {
   display: -webkit-box;
   display: -ms-flexbox;
