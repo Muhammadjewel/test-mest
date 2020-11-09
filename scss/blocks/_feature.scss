@@ -1,0 +1,76 @@
+// .feature {
+//   display: flex;
+//   background-color: rgba(255, 255, 255, 0.3);
+
+//   &::before {
+//     width: 60px;
+//     height: 60px;
+//     margin-right: 30px;
+//     border-radius: 50%;
+//     content: "";
+//   }
+
+//   &--tomato {
+//     border: 5px solid tomato;
+
+//     &::before {
+//       background-color: tomato;
+//     }
+//   }
+
+//   &--orange {
+//     border: 5px solid orange;
+//   }
+
+//   &--orange::before {
+//     background-color: orange;
+//   }
+// }
+
+// .feature--gold {
+//   border: 5px solid gold;
+
+//   &::before {
+//     background-color: gold;
+//   }
+// }
+
+.feature {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.3);
+
+  &::before {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 30px;
+    border-radius: 50%;
+    content: "";
+  }
+
+  &--tomato::before {
+    background-color: tomato;
+  }
+
+  &--orange::before {
+    background-color: orange;
+  }
+
+  &--gold::before {
+    background-color: gold;
+  }
+}
+
+@include retina-bg {
+  .feature {
+    &::before {
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &--tomato::before {
+      background-image: url("https://picsum.photos/120");
+    }
+  }
+}

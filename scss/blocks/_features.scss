@@ -1,0 +1,49 @@
+.features {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: $primary-color;
+  color: #fff;
+}
+
+.features__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.features__heading {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 445px;
+
+  @include section-heading;
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: -50px;
+    width: 60px;
+    height: 3px;
+    background-color: $accent-color;
+    content: "";
+  }
+}
+
+// .bu {
+//   &ra {
+//    &ti {
+//      &no {
+//        color: gold;
+//      }
+//    }
+//   }
+// }
+
+.features__list {
+  width: 100%;
+  max-width: 540px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
